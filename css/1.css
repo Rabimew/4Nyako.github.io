@@ -10,8 +10,8 @@
 	position: absolute;
     top: 50%;
     left: 50%;
-    height: 200px;  margin-top: -100px;
-    width: 400px;  margin-left: -200px;
+    margin-top: -100px;
+    width: 500px;  margin-left: -250px;
     background-color: cornflowerblue;
     padding: 25px;
 }
@@ -21,10 +21,16 @@
     border-style: solid;
     border-color: #000000;
     text-align:center;
+    margin-bottom: -20px;
 }
 
 .line3{
     color: #ffffff;
     text-align:center;
     width: 100%;
+    background-color: black;
+}
+
+.line4{
+    padding-top: 20px;
 }
