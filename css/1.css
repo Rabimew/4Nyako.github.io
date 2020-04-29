@@ -7,6 +7,8 @@
     width: 100%;
 }
 .line234{
+    border-style: outset;
+    border-color:#a0ccf0;
 	position: absolute;
     top: 50%;
     left: 50%;
@@ -36,6 +38,6 @@
 
 .line4{
     font-size:35px;
-    color: #f0f0a0;
+    color: #bfd7ec;
     padding-top: 20px;
 }
