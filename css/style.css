@@ -1,0 +1,233 @@
+.wow {
+  width: 100px;
+}
+body{
+    background-color:rgb(70, 127, 192);
+    margin:0px;
+    padding:0px;
+}
+
+/* 桌面 */
+.zhuomian{
+    position:absolute;
+    /* 桌面高度=百分百减（边距15*2+任务栏高度30+任务栏边框3） */
+    height: calc( 100% - 63px );
+    /* 桌面高宽度=百分百减边距15*2 */
+    width: calc( 100% - 30px );
+    padding: 15px;    
+}
+
+.zhuomian .zhuomianCol{
+    height: 80%;
+    width: 90px;
+    /* 每一列都向左浮动 */
+    float:left;
+}
+.zhuomian .zhuomianCol .kuaijiefangshi{
+    height: 90px;
+    width: 90px;
+    padding: 10px;
+    /* 去掉父类带来的浮动效果 */
+    float:none;
+    /*不允许选中文本*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    
+}
+.zhuomian .zhuomianCol .kuaijiefangshi .kuaijiefangshiIcon{
+    padding-left:10px;
+    padding-right:10px;/*父div的90减去父标记的边框10减图标的60px*2*/
+    height: 60px;
+    width: 60px;
+}
+.zhuomian .zhuomianCol .kuaijiefangshi .kuaijiefangshiName{
+    width: 80px;
+    height: auto;
+    font-size: 11px;
+    text-align:center;
+    color:aliceblue;
+}
+
+/* 开始菜单 */
+.kaishicaidan{
+    z-index: 9999;
+    position:absolute;
+    /* 贴贴下面的模块 */
+    bottom:0;
+    left:0;
+    padding:20px;
+    width:250px;
+    height:450px;
+    background-color:rgb(192, 192, 192);
+    border-style:outset;
+    border-width:3px;
+    display: inline;
+    /*不允许选中文本*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.kaishicaidan .zuobiandekuangkuang{
+    float:left;
+    margin:-20px;
+    /* 百分百加上父模块的上下边框 */
+    height:calc(100% + 40px);
+    width:30px;
+    background:linear-gradient(to top, blue,28%,black);
+}
+.kaishicaidan span{
+    color:aliceblue;
+    width:30px;
+    writing-mode:tb-rl;
+    font-size:18px;
+    letter-spacing:5px;
+    margin-top:20px;
+    margin-left: -3px;
+}
+
+.kaishicaidan ul{
+    float: none;
+    bottom:0;
+    right:0;
+    border-bottom:1px solid black;
+    list-style-type: none;
+}
+.kaishicaidan ul li{
+    margin: 33px;
+    margin-left: 0px;
+}
+.kaishicaidan .shangmian{
+    top: 0px;
+}
+.kaishicaidan .xiamian{
+    border: none;
+    bottom: 0px;
+}
+
+/* 任务栏 */
+.renwulan{
+    z-index: 9999;
+    height:30px;
+    width: 100%;
+    background-color:rgb(192, 192, 192);
+    position:absolute;
+    /* 贴贴下面的模块 */
+    bottom:0;
+    border-top-style:outset;
+    border-top-width:3px;
+    text-align:center;
+    /*不允许选中文本*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.renwulan .kaishibutton{
+    height:22px;
+    width:60px;
+    border-style:outset;
+    border-width:3px;
+    float: left;
+}
+.renwulan .kuaijiefangshi{
+    height:25px;
+    width:90px;
+    float: left;
+    border-left-style: ridge;
+    border-left-width:3px;
+    border-right-style: ridge;
+    border-right-width:3px;
+    margin-left:5px;
+}
+.renwulan .shijian{
+    line-height:12px;
+    font-size:5px;
+    height:24px;
+    width:auto;
+    float: right;
+    border-style: inset;
+    border-width:2px;
+}
+
+
+
+/* app们 */
+.appBiaotilan{
+    height:25px;
+    width: calc(100% - 10px);
+    background:linear-gradient(to left, blue,28%,black);
+    color: aliceblue;
+    padding-left:10px;
+    /*不允许选中文本*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.appBiaotilan img{
+    float: left;
+    padding-right:5px;
+}
+.appBiaotilan .appClose{
+    height:12px;
+    width:35px;
+    position:absolute;
+    top:4px;
+    right:5px;
+    background-color:rgb(192, 192, 192);
+    border-style:outset;
+    border-width:3px;
+    color:black;
+    text-align:center;
+    font-size:10px;
+    letter-spacing:3px;
+    line-height:11px
+}
+.appNeirong{
+    height:100%;
+    width: 100%;
+}
+.appText{
+    resize:none
+}
+/* app的任务栏样式 */
+.renwulan span{
+    padding-left: 5px;
+}
+.renwulan img{
+    float: left;
+}
+
+
+/* 应用——猫猫日记 */
+.appNyakoRiji{
+    position:absolute;
+    margin: -15px; /*为了抵消桌面div的padding*/
+    z-index: 100;
+    height: calc( 100% - 6px );/*减去上下边框*/
+    width: calc(100% - 6px);
+    border-style:outset;
+    border-width:3px;
+}
+.appNyakoRiji .appNeirong .appText{
+    height: calc( 100% - 31px );/*减去上下边框6 以及标题栏的25高度 25+6=31*/
+    width: calc(100% - 6px);/*减去上下边框*/
+}
+.renwulan .appNyakoRijiRenwulan{
+    height:22px;
+    width:200px;
+    border-style:outset;
+    border-width:3px;
+    float: left;
+    margin:0 3px;
+    padding-left:8px;
+    text-align: left;
+}
